@@ -1,0 +1,55 @@
+{% extends 'litlelemonresturant/main.html'%}
+{% load static %}
+
+
+
+{% block title%} Menu Item Page {% endblock title %}
+
+{% block content %}
+
+
+
+<div class="container">
+
+
+<h1>Menu Item</h1>
+
+<h1>{{ posts.Name }}</h1>
+<section>{{ posts.Description }}</section>
+<br>
+<img src="{% static '/litlelemon/images/t6.jpg' %}" alt="t6" height="300" width="200"/>
+
+
+
+
+</div>
+
+
+<!-- Footer -->
+<footer class="text-center text-dark" style="margin-top:300px">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+   
+
+  
+    <!-- Section: Form -->
+
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgb(210, 210, 210);">
+    © 2023 litlelemon:
+    <a class="text-dark" href="https://mdbootstrap.com/">litlelemon.com</a>
+    <img class="" src="{% static '/litlelemon/images/logo.jpg' %}" alt="logo" height="100" width="50"/>
+  </div>
+  
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+{% endblock content %}

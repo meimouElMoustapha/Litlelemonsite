@@ -1,0 +1,56 @@
+{% extends 'litlelemonresturant/main.html'%}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title%} Book page {% endblock title %}
+
+{% block content %}
+
+
+
+<div class="container">
+
+<h3>Book Your Meals now.</h3>
+
+<form method="POST" enctype="multipart/form-data">
+ 
+  <!-- Security token -->
+  {% csrf_token %}
+
+  <!-- Using the formset -->
+  {% comment %} {{ form.as_p }} {% endcomment %}
+  {{ form|crispy }}
+   
+  <input class="btn btn-primary"type="submit" value="Submit">
+</form>
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center text-dark" style="margin-top:300px">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+     
+  
+
+      <!-- Section: Links -->
+     <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgb(210, 210, 210);">
+      © 2023 litlelemon:
+      <a class="text-dark" href="https://mdbootstrap.com/">litlelemon.com</a>
+      <img class="" src="{% static '/litlelemon/images/logo.jpg' %}" alt="logo" height="100" width="50"/>
+    </div>
+    
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+{% endblock content %}
